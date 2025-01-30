@@ -41,6 +41,8 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'header-primary': '#EFEBE3',
+                        'header-secondary': '#FFFFFF',
 
 
                     }
@@ -54,9 +56,10 @@
 
 <body>
     <!-- header section start -->
-    <header class="font-sora">
-        <nav class="max-w-screen-xl mx-auto mt-10">
-            <div class="navbar bg-base-100">
+    <header class="font-sora bg-gradient-to-t  from-header-primary to-header-secondary w-full">
+        <!-- <div class="bg-gradient-to-t z-10 from-[header-secondary] to-[header-primary] w-full h-full"></div> -->
+        <nav class="max-w-screen-xl mx-auto mt-10 ">
+            <div class="navbar  ">
                 <div class="navbar-start">
                     <div class="dropdown hidden md:block">
                         <div tabindex="0" role="button" class="btn btn-ghost  md:hidden">
@@ -80,7 +83,7 @@
                 </div>
 
                 <!-- small device design start -->
-                <div class="md:hidden border-2 border-[#179800] w-[3000px] p-2 ">
+                <div class="md:hidden border-2 border-[#179800] w-[5000px] p-2 ">
                     <div class="md:hidden flex-1"><img class="w-30 h-10 " src="./assets/images/plogo.png" alt="header">
                     </div>
 
@@ -117,7 +120,7 @@
                     <div class="hidden  md:block"><a
                             class="btn bg-white border-1 border-[#179800] md:px-7 text-lg text-center ">Login</a></div>
                     <div class="hidden  md:block"><a
-                            class=" btn btn-success text-white bg-[#179800] md:px-8 text-lg text-center">Register</a>
+                            class="  btn btn-success text-white bg-[#179800] md:px-8 text-lg text-center">Register</a>
                     </div>
 
                     <!-- <div class="dropdown -right-10 relative ">
@@ -138,6 +141,32 @@
                 </div>
             </div>
         </nav>
+        <!-- banner section start -->
+
+        <!-- banner section title start -->
+        <section class="text-center mt-14">
+            <div class="space-y-6">
+                <h1 class="md:text-5xl text-[40px] px-5 font-bold">Freshness <span class="text-[#179800]">You Can
+                        <br>Count</span> On, Prices You’ll Love!</h1>
+                <p class="md:text-xl text-lg px-3">Shop your daily essentials at unbeatable prices. From fresh produce
+                    to pantry
+                    <br>
+                    staples, we’ve got you
+                    covered every day!
+                </p>
+            </div>
+        </section>
+        <!-- banner section title end -->
+
+        <!-- banner image section start -->
+        <section class="border-2 border-black  md:h-[600px] h-[400px] flex justify-center items-center mt-14">
+            <img class="w-[900px] h-full md:object-fill object-cover " src="./assets/images/hero-vegetables.png"
+                alt="hero-image">
+        </section>
+        <!-- banner image section end -->
+
+        <!-- banner section end -->
+
     </header>
     <!-- header section end -->
 
