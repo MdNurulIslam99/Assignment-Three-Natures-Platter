@@ -32,6 +32,24 @@
         .font-sora {
             font-family: "Sora", serif;
         }
+
+
+        .animation-title,
+        .animation {
+            animation: 3s infinite alternate text-inout;
+        }
+
+        @keyframes text-inout {
+            from {
+                translate: 1;
+                scale: 100% 1;
+            }
+
+            to {
+                translate: 2;
+                scale: 80% 1;
+            }
+        }
     </style>
 
     <!-- Custom Tailwind Css -->
@@ -53,62 +71,24 @@
         }
     </script>
 
-
 </head>
 
 <body>
     <!-- header section start -->
     <header class="font-sora bg-gradient-to-t  from-header-primary to-header-secondary w-full">
-        <!-- <div class="bg-gradient-to-t z-10 from-[header-secondary] to-[header-primary] w-full h-full"></div> -->
+
         <!-- navbar section Start  -->
         <nav class="max-w-screen-xl mx-auto mt-10 ">
-            <div class="navbar  ">
+
+            <div class="navbar border-2 border-[#179800] md:border-hidden w-[380px] relative left-3">
                 <div class="navbar-start">
-                    <div class="dropdown hidden md:block">
-                        <div tabindex="0" role="button" class="btn btn-ghost  md:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Product</a></li>
-                            <li><a>Services</a></li>
-                            <li><a>Contact us</a></li>
-                        </ul>
-                    </div>
+
                     <div class="left-5 relative hidden md:block"><img class="w-30 h-10 "
                             src="./assets/images/logo-header.png" alt="header">
                     </div>
-
-                </div>
-
-                <!-- small device design start -->
-                <div class="md:hidden border-2 border-[#179800] w-[5000px] p-2 ">
-                    <div class="md:hidden flex-1"><img class="w-30 h-10 " src="./assets/images/plogo.png" alt="header">
-                    </div>
-
-                    <div class="dropdown flex-1 md:hidden ">
-                        <div tabindex="0" role="button" class="btn btn-ghost  lg:hidden w-full ">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 relative -right-[70px]" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
-                        </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                            <li><a>Product</a></li>
-                            <li><a>Services</a></li>
-                            <li><a>Contact us</a></li>
-                        </ul>
+                    <div class="md:hidden "><img class="w-30 h-10 " src="./assets/images/plogo.png" alt="header">
                     </div>
                 </div>
-
-                <!-- small device design end -->
-
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 text-xl">
                         <li><a>Product</a></li>
@@ -116,7 +96,7 @@
                         <li><a>Contact us</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end md:space-x-5  ">
+                <div class="navbar-end md:space-x-5 ">
                     <div> <a class="hidden md:block" href=""><img src="./assets/images/search.png" alt="search"></a>
                     </div>
                     <div><a class="hidden md:block" href=""><img src="./assets/images/cart.png" alt="search"></a></div>
@@ -127,6 +107,21 @@
                     </div>
 
 
+                    <div class="dropdown  md:hidden">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow relative right-20">
+                            <li><a>Product</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Contact us</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -161,6 +156,18 @@
 
     <!-- main section start -->
     <main>
+
+        <!-- animation section start -->
+        <section
+            class="max-w-screen-xl mx-auto mt-20 p-6 font-sora bg-header-primary space-y-5 rounded-lg text-center w-[380px] h-[250px] md:w-full md:h-[200px]">
+            <h1 class="text-4xl font-bold text-[#179800] animation-title">Animation Policy</h1>
+            <p class="animation font-bold">
+                A business policy is a set of guidelines,rules and principles that a company follows to achieve its
+                goals,ensure smooth operations and maintain consistency in decision-making.
+            </p>
+        </section>
+        <!-- animation section end -->
+
         <!-- All Product section start -->
         <section class="max-w-screen-xl mx-auto mt-20 p-6 font-sora ">
             <h1 class="text-4xl font-bold text-[#179800]">All Items</h1>
